@@ -37,3 +37,9 @@ int	ft_printf(const char *format, ...)
 	va_end(ap);
 	return (count);
 }
+
+int		main(void)
+{
+	ft_printf("Hello %s", "World");
+	return (0);
+}
