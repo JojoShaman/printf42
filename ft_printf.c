@@ -3,10 +3,10 @@
 /*                                                       :::      ::::::::    */
 /*   ft_printf.c                                       :+:      :+:    :+:    */
 /*                                                   +:+ +:+         +:+      */
-/*   By: srosu <sorinrosu45@gmail.com>             #+#  +:+       +#+         */
+/*   By: srosu <srosu@student.42belgium.be>        #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/04/07 15:21:04 by srosu            #+#    #+#              */
-/*   Updated: 2026/04/08 18:31:34 by srosu           ###   ########.fr        */
+/*   Updated: 2026/04/16 16:46:35 by srosu           ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int	ft_printf(const char *format, ...)
 {
-	int	i;
-	int	count;
+	int			i;
+	int			count;
+	va_list		ap;
 
-	va_list ap;
 	i = 0;
 	count = 0;
 	va_start(ap, format);
@@ -36,10 +36,4 @@ int	ft_printf(const char *format, ...)
 	}
 	va_end(ap);
 	return (count);
-}
-
-int		main(void)
-{
-	ft_printf("Hello %s", "World");
-	return (0);
 }

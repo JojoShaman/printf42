@@ -3,10 +3,10 @@
 /*                                                       :::      ::::::::    */
 /*   ft_printf.h                                       :+:      :+:    :+:    */
 /*                                                   +:+ +:+         +:+      */
-/*   By: srosu <sorinrosu45@gmail.com>             #+#  +:+       +#+         */
+/*   By: srosu <srosu@student.42belgium.be>        #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/04/07 15:20:36 by srosu            #+#    #+#              */
-/*   Updated: 2026/04/08 18:14:40 by srosu           ###   ########.fr        */
+/*   Updated: 2026/04/16 16:44:47 by srosu           ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <unistd.h>
 # include <stdio.h>
 
+int		ft_printf(const char *format, ...);
 void	type_is(char c, va_list ap, int *count);
 void	ft_putchar_fd(int c, int fd, int *count);
 void	ft_putnbr_base(long nb, char *base, int *count);
