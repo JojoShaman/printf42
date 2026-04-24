@@ -14,10 +14,10 @@
 
 int	ft_printf(const char *format, ...)
 {
-	int	i;
-	int	count;
+	int		i;
+	int		count;
+	va_list	ap;
 
-	va_list ap;
 	i = 0;
 	count = 0;
 	va_start(ap, format);

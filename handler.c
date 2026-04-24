@@ -34,8 +34,10 @@ static void	check_ptr_p(unsigned long p, int *count)
 	}
 }
 
-void	type_is(char c, va_list * ap, int *count)
+void	type_is(char c, va_list *ap, int *count)
 {
+	unsigned long	arg;
+
 	if (c == 'c')
 		ft_putchar_fd(va_arg(*ap, int), 1, count);
 	if (c == 's')
@@ -44,12 +46,16 @@ void	type_is(char c, va_list * ap, int *count)
 		check_ptr_p((unsigned long) va_arg(*ap, void *), count);
 	if (c == 'd' || c == 'i')
 		ft_putnbr_fd((long long) va_arg(*ap, int), 1, count);
-	if (c == 'u')
-		ft_putnbr_base((unsigned long) va_arg(*ap, unsigned int), "0123456789", count);
-	if (c == 'x')
-		ft_putnbr_base((unsigned long) va_arg(*ap, unsigned int), "0123456789abcdef", count);
-	if (c == 'X')
-		ft_putnbr_base((unsigned long) va_arg(*ap, unsigned int), "0123456789ABCDEF", count);
+	if (c == 'u' || c == 'x' || c == 'X')
+	{
+		arg = (unsigned long) va_arg(*ap, unsigned int);
+		if (c == 'u')
+			ft_putnbr_base(arg, "0123456789", count);
+		if (c == 'x')
+			ft_putnbr_base(arg, "0123456789abcdef", count);
+		if (c == 'X')
+			ft_putnbr_base(arg, "0123456789ABCDEF", count);
+	}
 	if (c == '%')
 		ft_putchar_fd('%', 1, count);
 }

@@ -14,12 +14,10 @@
 # define FT_PRINTF_H
 
 # include <stdarg.h>
-# include <stdlib.h>
 # include <unistd.h>
-# include <stdio.h>
 
 int		ft_printf(const char *format, ...);
-void	type_is(char c, va_list * ap, int *count);
+void	type_is(char c, va_list *ap, int *count);
 void	ft_putchar_fd(int c, int fd, int *count);
 void	ft_putnbr_base(unsigned long nb, char *base, int *count);
 void	ft_putstr_fd(char *s, int fd, int *count);
