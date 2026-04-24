@@ -84,8 +84,8 @@ Converts and prints a number in an arbitrary base. Used for `%x`, `%X`, and `%p`
 ### 1. Clone the repository
 
 ```bash
-git clone git@github.com:srosu/ft_printf.git
-cd ft_printf
+git clone git@github.com:JojoShaman/printf42.git
+cd printf42
 ```
 
 ### 2. Build the static library
@@ -136,15 +136,12 @@ ft_printf("Hex: %x / %X\n", 255, 255);
 - `man 0 stdarg.h` — variadic argument macros: `va_list`, `va_start`, `va_arg`, `va_end`
 
 ### Articles & Guides
-
 - GeeksforGeeks — [Variadic functions in C](https://www.geeksforgeeks.org/variadic-functions-in-c/): covers how `va_arg` retrieves arguments at runtime
 - 42 student write-ups — walkthroughs of the parse → dispatch → convert pattern that underpins the implementation
 
-### Testing & Debugging Tools
-
-- **Valgrind Memcheck** — used to verify the absence of memory leaks
-- **AddressSanitizer (ASan)** — catch buffer overflows and use-after-free errors at runtime (`-fsanitize=address`)
+### Testing
 - **printf-tester** by [Tripouille](https://github.com/Tripouille/printfTester) and **pft** — community testers used to validate behavior across all specifiers and edge cases
+- Behavior was also validated manually by comparing output directly against the original `printf`
 
 ## Use of AI
 
