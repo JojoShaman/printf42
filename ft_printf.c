@@ -6,7 +6,7 @@
 /*   By: srosu <srosu@student.42belgium.be>        #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/04/07 15:21:04 by srosu            #+#    #+#              */
-/*   Updated: 2026/04/16 16:46:35 by srosu           ###   ########.fr        */
+/*   Updated: 2026/04/24 00:13:08 by srosu           ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int	ft_printf(const char *format, ...)
 {
-	int			i;
-	int			count;
-	va_list		ap;
+	int	i;
+	int	count;
 
+	va_list ap;
 	i = 0;
 	count = 0;
 	va_start(ap, format);
@@ -30,7 +30,7 @@ int	ft_printf(const char *format, ...)
 		}
 		else
 		{
-			type_is(format[++i], ap, &count);
+			type_is(format[++i], &ap, &count);
 			i++;
 		}
 	}
