@@ -1,7 +1,7 @@
 NAME = libftprintf.a
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-SRCS = ft_printf.c type_is.c ft_putchar_fd.c ft_putnbr_base.c ft_putstr_fd.c ft_putnbr_fd.c
+SRCS = ft_printf.c handler.c ft_putchar_fd.c ft_putnbr_base.c ft_putstr_fd.c ft_putnbr_fd.c
 OBJS = ${SRCS:.c=.o}
 
 all: ${NAME}
