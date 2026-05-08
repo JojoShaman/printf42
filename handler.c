@@ -31,7 +31,7 @@ static void	check_ptr_p(unsigned long p, int *count)
 		ft_putstr_fd("(nil)", 1, count);
 }
 
-void	type_is(char c, va_list * ap, int *count)
+void	type_is(char c, va_list *ap, int *count)
 {
 	unsigned long	arg;
 
