@@ -6,7 +6,7 @@
 /*   By: srosu <srosu@student.42belgium.be>        #+#  +:+       +#+         */
 /*                                               +#+#+#+#+#+   +#+            */
 /*   Created: 2026/04/08 17:06:23 by srosu            #+#    #+#              */
-/*   Updated: 2026/05/04 20:45:24 by srosu           ###   ########.fr        */
+/*   Updated: 2026/05/08 16:56:33 by srosu           ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,7 @@ static void	check_ptr_p(unsigned long p, int *count)
 		ft_putnbr_base(p, "0123456789abcdef", count);
 	}
 	else
-	{
-		ft_putstr_fd("0x", 1, count);
-		ft_putchar_fd('0', 1, count);
-	}
+		ft_putstr_fd("(nil)", 1, count);
 }
 
 void	type_is(char c, va_list * ap, int *count)
